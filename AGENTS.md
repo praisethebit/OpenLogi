@@ -1,5 +1,20 @@
 # OpenLogi — Agent Guide
 
+Work folder: `.scratch`.
+
+## Fork conventions
+
+This checkout is `praisethebit/OpenLogi`, a public fork of `AprilNEA/OpenLogi`. We add support for Logitech G-series devices, and we offer each change to upstream. These rules override the upstream text below.
+
+- The repo is public. Write no serial number, unit ID, host name or secret in a file, a commit or a PR.
+- Branches: `harness` is the default branch. It holds only the fork rules: this section and `docs/agents/upstream.md`. `master` mirrors upstream, so commit nothing to `master`. Why: an upstream PR must hold only the commits of one change.
+- Upstream PR: before you write code for upstream, or open an issue, a PR or a comment there, read `docs/agents/upstream.md`.
+- Commit and push with the `ship` skill. Use no `Co-Authored-By` line.
+- Write the fork rules and the issue files in ASD-STE100 Simplified Technical English. A text for upstream follows the upstream style.
+- Issues for this repo live in `.scratch/issues/`. Before you create, move or close an issue, read `~/.claude/issue-tracker.md`. `.scratch` is a symlink to the vault. `.git/info/exclude` ignores it, because `.gitignore` is an upstream file.
+- Use no GitHub Actions, no Copilot and no GitHub issues, wiki, projects or discussions in the fork. Talk to upstream in the issues, discussions and PRs of `AprilNEA/OpenLogi`.
+- Test level: Product. The upstream gate in `.agents/rules/ci.md` is the test rule.
+
 OpenLogi is a native, local-first alternative to Logitech Options+ written in Rust:
 button remapping, DPI, SmartShift, and per-app profiles for Logitech HID++ devices
 (Bolt/Unifying receiver, Bluetooth-direct, wired) — no account, no telemetry, plain-TOML
